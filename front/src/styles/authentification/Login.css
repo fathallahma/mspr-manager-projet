@@ -1,0 +1,248 @@
+/* Styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Empêche le défilement */
+}
+
+/* Conteneur principal de la page de connexion */
+.login-page {
+    display: flex;
+    height: 100vh;
+}
+
+/* Conteneur pour la partie gauche */
+.login-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.login-tablet-container {
+    position: absolute;
+    top: 50%; /* Adjust positioning to center above back */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.login-plant-container {
+    position: absolute;
+    top: 0%;
+    right: -3%;
+    z-index: 2; /* Middle layer */
+    width: 35%;
+}
+
+.login-back-container {
+    height: 100%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.05), /* Ombre à droite */
+                -4px 0 12px rgba(0, 0, 0, 0.05), /* Ombre à gauche */
+                0 4px 12px rgba(0, 0, 0, 0.05), /* Ombre en bas */
+                0 -4px 12px rgba(0, 0, 0, 0.05); /* Ombre en haut */
+   
+}
+
+/* Ensure images fit their containers */
+.login-back, .login-tablet, .login-plant{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.login-back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Boîte de connexion alignée à droite */
+.login-box {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    transition: transform 0.5s ease;
+}
+
+.login-logo {
+    width: 100px;
+    margin: 0 auto 20px;
+}
+
+.login-box h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Style commun pour les champs de texte et le bouton */
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box button {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.login-box button:hover {
+    background-color: #778da9;
+}
+
+/* Champ de mot de passe avec bouton */
+.password-field {
+    position: relative;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.password-field input[type="password"],
+.password-field input[type="text"] {
+    width: 100%;
+    padding-right: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.password-field button.show-password {
+    position: absolute;
+    right: 0.5rem;
+    top: 40%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+    left: 85%;
+    width: 5%;
+}
+
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #0096c7;
+    margin-top: 1rem;
+}
+
+.additional-links a {
+    color: #778da9;
+    text-decoration: none;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color : red
+}
+
+.login-plant-container-mobile {
+    display: none;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 600px) {
+    /* Ajuster la disposition principale */
+    .login-page {
+        flex-direction: column;
+    }
+
+    .login-left {
+        display: none;
+    }
+
+    /* Ajuster la boîte de connexion */
+    .login-box {
+        max-width: 90%; /* Réduire la largeur pour s'adapter à l'écran */
+        padding: 1.5rem; /* Réduire le padding */
+        margin: 1rem auto; /* Ajouter un espace autour */
+    }
+
+    /* Réduire la taille du logo */
+    .login-logo {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    /* Champ de mot de passe avec icône */
+    .password-field button.show-password {
+        font-size: 1rem; /* Réduire la taille de l'icône */
+        right: 0.5rem;
+    }
+
+    /* Conteneur de la partie gauche (image / illustration) */
+    .login-tablet-container {
+        display: none; /* Masquer sur mobile pour plus de place */
+    }
+
+    .additional-links {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #0096c7;
+        margin-top: 1rem;
+    }
+    
+    .additional-links a {
+        color: #778da9;
+        text-decoration: none;
+    }
+    
+    .additional-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Taille de la police pour les champs de saisie */
+    .login-box input[type="text"],
+    .login-box input[type="password"],
+    .login-box button {
+        font-size: 0.9rem; /* Réduire la taille de la police */
+    }
+
+    /* Message d'erreur */
+    .error-message {
+        font-size: 0.8rem; /* Taille de police plus petite pour l'erreur */
+    }
+
+    .login-plant-container-mobile {
+        display: block;
+        
+    }
+
+    .login-plant-mobile {
+        position: absolute;
+        top: -5%;
+        right: 0;
+        z-index: 2;
+        width: auto; /* Réduit la taille de l'image en ajustant la largeur */
+        height: 25%; /* Garde les proportions */
+        bottom: -2;
+
+    }
+}
+
