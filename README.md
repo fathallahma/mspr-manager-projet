@@ -1,1 +1,0 @@
-# mspr-manager-projet
