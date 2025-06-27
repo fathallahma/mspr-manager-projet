@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: mfa-key
+  namespace: openfaas-fn
+spec:
+  encryptedData:
+    MFA_KEY_B64: AgAhPgDwjvF8nspfEBpVWl/64L9Qg9y93gTfUtePBI4BHss8iw4dDbn4zsmO17DKdZRmIdYP8woam3DJUWOhryIcZuF/prHggesxFCKZEouJF+aHG2EKeKlBjn3MBw5EPkvoUlxVk3VHqGcIcQU1f+WVeSNDCRp+fEvYfGhVTykUR5d5aVzP0GEzK1tM4c0x9Prd6dH6IGxOHw80NQUzxYH//9M3jXiepKTbWeYz8TaXcTjSgxio68X+G9TXv/c9Rs75F02w60ZPFbkFHNHyVVuJ8hG9X89jXjfrjzo1LSjU8eNBPKtZhw8kVlX5fqOmou+2DemLpGwxntqpxQlFQdt6XPHoN0OpVOBPpSdRtVEpiP9KWzHVZgCJWLfo3Kv16P+fNqxifShwlECtI/hX2kHbiG1vVgWbPx0VzzjoBPANBicvDl2nGl5hpP0Nqbnoj4E9sSj9GmUA50sV9i+viwIsxkQ0eySlD0tpzfqR0Zjrl30/EEci8bwTz8Uw/aEo6CjO/ee8jFw/+Tf6YocjW2l/fbxJH3Aff6QANUbWIStbVrEZGC1eKiOFndWN4M1tLVHiSNR+ALKLnd/qSywiwwuwIA7HbdhnOqWtPx1MTUYCJmrrNpi201Gjh+cwqVTEYKSrUkpkgt7OCMyrVpi0pylYTtetIELqoObA6BHaPa6zUv3jx4q+lZju2nVyV7cWG5AOIxUXO+SXt1YRvLwCpVM6hsQgrAK9HCMhUMlkaFz0fgOJOM2PyI1pU2mCiQ==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: mfa-key
+      namespace: openfaas-fn
+
