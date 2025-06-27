@@ -1,0 +1,14 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  generate-2fa:
+    lang: python3-http
+    handler: ./generate-2fa
+    image: generate-2fa:latest
+    environment:
+      DB_HOST: "postgres"
+      DB_NAME: "mspr_db"
+      DB_USER: "postgres"
+      DB_PASSWORD: "password" 
