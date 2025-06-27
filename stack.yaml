@@ -12,11 +12,10 @@ functions:
       DB_HOST: "host.k3d.internal"
       DB_NAME: "mspr_db"
       DB_USER: "mspr_user"
-      DB_PASSWORD:
-        secret: db-creds
       DB_PORT: "5432"
-      MFA_KEY_B64:
-        secret: mfa-key
+    secrets:
+      - db-creds
+      - mfa-key
     build_args:
       ADDITIONAL_PACKAGE: "postgresql-dev gcc musl-dev"
 
@@ -28,11 +27,10 @@ functions:
       DB_HOST: "host.k3d.internal"
       DB_NAME: "mspr_db"
       DB_USER: "mspr_user"
-      DB_PASSWORD:
-        secret: db-creds
       DB_PORT: "5432"
-      MFA_KEY_B64:
-        secret: mfa-key
+    secrets:
+      - db-creds
+      - mfa-key
     build_args:
       ADDITIONAL_PACKAGE: "postgresql-dev gcc musl-dev"
 
@@ -44,10 +42,9 @@ functions:
       DB_HOST: "host.k3d.internal"
       DB_NAME: "mspr_db"
       DB_USER: "mspr_user"
-      DB_PASSWORD:
-        secret: db-creds
       DB_PORT: "5432"
-      MFA_KEY_B64:
-        secret: mfa-key
+    secrets:
+      - db-creds
+      - mfa-key
     build_args:
       ADDITIONAL_PACKAGE: "postgresql-dev gcc musl-dev"
