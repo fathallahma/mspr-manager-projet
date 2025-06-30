@@ -152,6 +152,25 @@ else
         exit 1
     fi
 fi
+
+# -------------------------------------------------------------
+# Vérifier/patcher l'entrée DNS "host.k3d.internal" (accès DB)
+# -------------------------------------------------------------
+
+echo "🌐 Vérification de l'alias DNS host.k3d.internal dans CoreDNS..."
+# Récupérer l'adresse passerelle du réseau Docker associé au cluster
+HOST_GATEWAY_IP=$(docker network inspect k3d-demo -f '{{ (index .IPAM.Config 0).Gateway }}')
+
+# Si l'entrée n'existe pas encore, on l'ajoute et on redémarre CoreDNS
+if ! kubectl -n kube-system get configmap coredns -o yaml | grep -q "host.k3d.internal"; then
+    echo "   ➕ Ajout de host.k3d.internal -> $HOST_GATEWAY_IP dans CoreDNS"
+    kubectl -n kube-system patch configmap coredns --type merge -p "{\"data\":{\"NodeHosts\":\"$HOST_GATEWAY_IP host.k3d.internal host.docker.internal\"}}"
+    kubectl -n kube-system rollout restart deploy/coredns
+    kubectl -n kube-system rollout status deploy/coredns --timeout=60s
+    echo "   ✅ CoreDNS patché avec succès"
+else
+    echo "   ✅ Alias déjà présent"
+fi
 echo ""
 
 # Vérifier et installer OpenFaaS si nécessaire
