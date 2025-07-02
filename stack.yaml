@@ -9,7 +9,7 @@ functions:
     handler: ./generate-password
     image: lotfidjermouni/generate-password:latest
     environment:
-      DB_HOST: "host.k3d.internal"
+      DB_HOST: "host.k3d.internal."
       DB_NAME: "mspr_db"
       DB_USER: "mspr_user"
       DB_PORT: "5432"
@@ -24,7 +24,7 @@ functions:
     handler: ./generate-2fa
     image: lotfidjermouni/generate-2fa:latest
     environment:
-      DB_HOST: "host.k3d.internal"
+      DB_HOST: "host.k3d.internal."
       DB_NAME: "mspr_db"
       DB_USER: "mspr_user"
       DB_PORT: "5432"
@@ -39,7 +39,7 @@ functions:
     handler: ./authenticate-user
     image: lotfidjermouni/authenticate-user:latest
     environment:
-      DB_HOST: "host.k3d.internal"
+      DB_HOST: "host.k3d.internal."
       DB_NAME: "mspr_db"
       DB_USER: "mspr_user"
       DB_PORT: "5432"
