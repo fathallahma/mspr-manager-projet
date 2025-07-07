@@ -5,21 +5,11 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-(node:98731) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:102803) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:98731) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:102803) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
-Failed to compile.
-
-Module not found: Error: You attempted to import ../../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
-You can either move it inside src/, or add a symlink to it from project's node_modules/.
-ERROR in ./src/components/authentification/Login.js 9:0-51
-Module not found: Error: You attempted to import ../../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
-You can either move it inside src/, or add a symlink to it from project's node_modules/.
-
-webpack compiled with 1 error
-Compiling...
 Failed to compile.
 
 Module not found: Error: You attempted to import /../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
@@ -37,6 +27,9 @@ Requests that start with a name are treated as module requests and resolve withi
 If changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.
 
 webpack compiled with 1 error
+Compiling...
+Compiled successfully!
+webpack compiled successfully
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
@@ -50,30 +43,5 @@ your devDependencies to work around this error. This will make this message
 go away.[0m
   
 Compiling...
-Failed to compile.
-
-Module not found: Error: You attempted to import ../../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
-You can either move it inside src/, or add a symlink to it from project's node_modules/.
-ERROR in ./src/components/authentification/Login.js 9:0-51
-Module not found: Error: You attempted to import ../../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
-You can either move it inside src/, or add a symlink to it from project's node_modules/.
-
-webpack compiled with 1 error
-Compiling...
-Failed to compile.
-
-Module not found: Error: You attempted to import /../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
-You can either move it inside src/, or add a symlink to it from project's node_modules/.
-Did you mean './/../../store/Store'?
-Requests that should resolve in the current directory need to start with './'.
-Requests that start with a name are treated as module requests and resolve within module directories (node_modules, /home/lotfi/Desktop/mspr-manager-projet/front/node_modules).
-If changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.
-ERROR in ./src/components/authentification/Login.js 9:0-49
-Module not found: Error: You attempted to import /../../store/Store which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
-You can either move it inside src/, or add a symlink to it from project's node_modules/.
-Did you mean './/../../store/Store'?
-Requests that should resolve in the current directory need to start with './'.
-Requests that start with a name are treated as module requests and resolve within module directories (node_modules, /home/lotfi/Desktop/mspr-manager-projet/front/node_modules).
-If changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.
-
-webpack compiled with 1 error
+Compiled successfully!
+webpack compiled successfully

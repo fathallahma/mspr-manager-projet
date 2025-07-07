@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { connectUser } from "/../../store/Store";
+import { connectUser } from "../../store/Store";
 import Signup from "./Signup";
 import ForgotPassword from "./ForgotPassword";
 import "../../styles/authentification/Login.css";
