@@ -5,9 +5,9 @@
 Browserslist: caniuse-lite is outdated. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-(node:11878) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:13974) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:11878) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:13974) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
 Compiled successfully!
@@ -15,9 +15,16 @@ Compiled successfully!
 You can now view front in the browser.
 
   Local:            http://localhost:3001
-  On Your Network:  http://192.168.1.33:3001
+  On Your Network:  http://10.192.14.50:3001
 
 Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/authentification/Login' in '/home/lotfi/Desktop/mspr-manager-projet/front/src'
+ERROR in ./src/App.js 9:0-56
+Module not found: Error: Can't resolve './components/authentification/Login' in '/home/lotfi/Desktop/mspr-manager-projet/front/src'
+
+webpack compiled with 1 error
